@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
         content,
         mediaUrls,
         platforms,
-        scheduledFor: scheduledFor ? new DateTime(scheduledFor) : null,
+        scheduledFor: scheduledFor ? new Date(scheduledFor) : null,
         status: scheduledFor ? "scheduled" : "draft",
       },
     });
